@@ -1,4 +1,9 @@
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import (
+    InlineKeyboardMarkup,
+    InlineKeyboardButton,
+    ReplyKeyboardMarkup,
+    KeyboardButton,
+)
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 
@@ -46,3 +51,25 @@ def get_back_button() -> InlineKeyboardMarkup:
         ),
     )
     return builder.as_markup()
+
+
+def get_main_reply_keyboard() -> ReplyKeyboardMarkup:
+    """Основная reply-клавиатура — быстрый доступ без ввода команд."""
+    return ReplyKeyboardMarkup(
+        keyboard=[
+            [
+                KeyboardButton(text="📝 Текст"),
+                KeyboardButton(text="🎨 Изображение"),
+            ],
+            [
+                KeyboardButton(text="💻 Код"),
+                KeyboardButton(text="🎭 Роль"),
+            ],
+            [
+                KeyboardButton(text="✨ Улучшить"),
+                KeyboardButton(text="❓ Помощь"),
+            ],
+        ],
+        resize_keyboard=True,
+        input_field_placeholder="Выбери действие…",
+    )
