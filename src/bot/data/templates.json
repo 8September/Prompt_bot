@@ -1,0 +1,64 @@
+{
+    "categories": {
+        "text": {
+            "label": "📝 Текст",
+            "description": "Промпты для ChatGPT, Claude, Gemini",
+            "templates": {
+                "article": {
+                    "label": "Статья",
+                    "template": "Напиши {tone} статью на тему '{topic}' объёмом {length} слов. Целевая аудитория: {audience}. Структура: введение, {sections} разделов, заключение."
+                },
+                "email": {
+                    "label": "Письмо",
+                    "template": "Напиши {tone} письмо от {sender} к {recipient} на тему '{topic}'. Цель письма: {goal}."
+                },
+                "summary": {
+                    "label": "Резюме текста",
+                    "template": "Сделай краткое резюме следующего текста в {length} предложениях, выдели главные мысли:\n\n{text}"
+                }
+            }
+        },
+        "image": {
+            "label": "🎨 Изображение",
+            "description": "Промпты для Midjourney, DALL-E, Stable Diffusion",
+            "templates": {
+                "portrait": {
+                    "label": "Портрет",
+                    "template": "{subject}, {style} style, {lighting} lighting, {camera} shot, highly detailed, 8k resolution"
+                },
+                "landscape": {
+                    "label": "Пейзаж",
+                    "template": "{scene}, {time_of_day}, {weather}, {art_style}, cinematic composition, ultra realistic, 4k"
+                }
+            }
+        },
+        "code": {
+            "label": "💻 Код",
+            "description": "Промпты для генерации и улучшения кода",
+            "templates": {
+                "function": {
+                    "label": "Функция",
+                    "template": "Напиши {language} функцию которая {task}. Требования: {requirements}. Добавь docstring и обработку ошибок."
+                },
+                "review": {
+                    "label": "Ревью кода",
+                    "template": "Сделай code review следующего {language} кода. Найди баги, проблемы с производительностью и нарушения best practices:\n\n{code}"
+                }
+            }
+        },
+        "role": {
+            "label": "🎭 Роль",
+            "description": "Системные промпты с ролью для ИИ",
+            "templates": {
+                "expert": {
+                    "label": "Эксперт",
+                    "template": "Ты опытный {profession} с {years} летним опытом. Отвечай на вопросы как настоящий специалист, используй профессиональную терминологию, приводи конкретные примеры из практики."
+                },
+                "teacher": {
+                    "label": "Учитель",
+                    "template": "Ты терпеливый учитель {subject}. Объясняй сложные концепции простым языком, используй аналогии и примеры. Уровень ученика: {level}."
+                }
+            }
+        }
+    }
+}
